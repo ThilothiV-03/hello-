@@ -1,0 +1,53 @@
+print("LINKEDIN PROFILE ANALYZER")
+print("-------------------------")
+
+name = input("Enter your name: ")
+headline = input("Enter your professional headline: ")
+skills = input("Enter your skills, separated by commas: ")
+about = input("Enter your About section: ")
+
+score = 0
+
+if name.strip():
+    score += 20
+    print("Name: Available")
+else:
+    print("Name: Missing")
+
+if headline.strip():
+    score += 25
+    print("Headline: Available")
+else:
+    print("Headline: Missing")
+
+if skills.strip():
+    score += 30
+    print("Skills: Available")
+else:
+    print("Skills: Missing")
+
+if about.strip():
+    score += 25
+    print("About section: Available")
+else:
+    print("About section: Missing")
+
+print("\nPROFILE ANALYSIS")
+print("Name:", name)
+print("Profile completeness:", score, "%")
+
+if score >= 80:
+    print("Recommendation: Good profile completeness!")
+elif score >= 50:
+    print("Recommendation: Improve your profile.")
+else:
+    print("Recommendation: Add more profile information.")
+
+if not headline.strip():
+    print("Tip: Add a professional headline.")
+
+if not skills.strip():
+    print("Tip: Include your technical skills.")
+
+if not about.strip():
+    print("Tip: Write a short professional summary.")
